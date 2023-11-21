@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+etudiant_edit:
+    path: '/etudiant/edit/{id}'
+    controller: App\Controller\EtudiantController::update
+    methods: ['GET', 'POST']
