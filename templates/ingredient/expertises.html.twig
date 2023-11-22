@@ -7,10 +7,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Styled Form</title>
     <style>
+     @media (max-width: 340px) {
     .test{
      
         font-family: fangsong;
     }
+    #nav{
+      width: 80em;
+    }
+   #test{
+      width:1300px;
+      text-align:center;
+      
+    }
+    #Expertises{
+      text-align:center;
+      width:1300px;
+      
+    }}
     </style>
 </head>
 <body>
@@ -18,17 +32,21 @@
 <div class="relative shadow bg-white">
     <div></div>
 
-    <div class="w-full  p-3 bg-[#023859] ">
+    <div id="nav" class="w-full  p-3 bg-[#023859]  ">
         <div class="relative z-1 h-16 mx-auto px-5 max-w-7xl flex items-center justify-between text-white  text-xl  ">
             <a class="text-2xl hover:text-cyan-400 transition-colors" href="" >
-                      
-                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
-
-                        
+                                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
 
             </a>
 
-            <ul class="flex items-center  justify-center gap-5">
+            <!-- Mobile Navigation Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <ul class="hidden lg:flex items-center justify-center gap-5">
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
@@ -37,100 +55,111 @@
             </ul>
         </div>
     </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#023859] text-white" style ="width: 80em;">
+        <ul class="flex flex-col items-center gap-4 py-4">
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Notes Juridiques</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Contact</a></li>
+        </ul>
+    </div>
 </div>
 
 
 
-<div class="flex flex-col ">
+<div class="flex flex-col " id="Expertises">
     <h1 class=" text-5xl font-light text-center  mt-8 mb-6 text-[#EDD6A7]">Nos Expertises</h1>
-<section class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-3  w-full  p-10" >
 
-    <div class="flex flex-col gap-6 pl-10  ">
 
-        <div class="flex justify-start flex-col  gap-4 ">
-            <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit international</h1>
+    
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full p-10" id="test">
+
+    <!-- Première colonne -->
+    <div class="flex flex-col gap-6 pl-10 mb-8 sm:mb-0 lg:w-3/3">
+
+        <div class="flex justify-start flex-col gap-4 lg:w-full ">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit international</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10   text-[#023859] ">
+            <div class=" w-full font-roboto text-xl leading-10 text-[#023859]">
                 Statut personnel des étrangers, Droit commercial international et lex mercatoria.
-             </div>
+            </div>
         </div>
 
-        <div class="flex justify-start flex-col  gap-4">
-            <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit du travail et de la sécurité sociale</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit du travail et de la sécurité sociale</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10  text-[#023859] ">
-               Gestion des relations individuelles, Gestion des relations collectives, Gestion des conflits au travail.
-             </div>
+            <div class="w-full font-roboto text-xl leading-10 text-[#023859]">
+                Gestion des relations individuelles, Gestion des relations collectives, Gestion des conflits au travail.
+            </div>
         </div>
 
-        <div class="flex justify-start flex-col gap-4 ">
-             <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit immobilier et droit foncier</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit immobilier et droit foncier</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10  text-[#023859] ">
-               Litiges relatifs aux immeubles, droits réels, copropriété, location immobilière, transactions immobilières, régime relatif aux biens immobiliers, troubles de voisinage..
-             </div>
+            <div class="w-full font-roboto text-xl leading-10 text-[#023859]">
+                Litiges relatifs aux immeubles, droits réels, copropriété, location immobilière, transactions immobilières, régime relatif aux biens immobiliers, troubles de voisinage.
+            </div>
         </div>
-
 
     </div>
 
+    <!-- Deuxième colonne -->
+    <div class="flex flex-col gap-6 pl-10 mb-8 sm:mb-0 lg:w-3/3">
 
-    <div class="flex flex-col gap-6 pl-10  ">
-
-        <div class="flex justify-start flex-col  gap-4 ">
-            <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit des sociétés et droit pénal des affaires</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit des sociétés et droit pénal des affaires</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10   text-[#023859] ">
-               Structure juridique adaptée, Actes sociaux et contrats à caractère commercial, Acquisition ou cession d’entreprise, Contentieux des entreprises, Infraction sociale, etc..
-             </div>
+            <div class="test w-full font-roboto text-xl leading-10 text-[#023859]">
+                Structure juridique adaptée, Actes sociaux et contrats à caractère commercial, Acquisition ou cession d’entreprise, Contentieux des entreprises, Infraction sociale, etc.
+            </div>
         </div>
 
-        <div class="flex justify-start flex-col  gap-4">
-            <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit de la famille</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit de la famille</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10  text-[#023859] ">
-               Mariage, Filiation, Droit au nom, changement de nom et de prénom, Gestion des biens acquis pendant le mariage, Divorce, Héritage, Droit de la nationalité, Etat civil, Adoption des enfants abandonnés (Kafala).
-             </div>
+            <div class="test w-full font-roboto text-xl leading-10 text-[#023859]">
+                Mariage, Filiation, Droit au nom, changement de nom et de prénom, Gestion des biens acquis pendant le mariage, Divorce, Héritage, Droit de la nationalité, Etat civil, Adoption des enfants abandonnés (Kafala).
+            </div>
         </div>
 
-        <div class="flex justify-start flex-col gap-4 ">
-             <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">NTIC</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">NTIC</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10  text-[#023859] ">
-              Contrats informatiques, CGU, CGV, mentions légales, commerce électronique, sécurité informatique.
-             </div>
+            <div class="test w-full font-roboto text-xl leading-10 text-[#023859]">
+                Contrats informatiques, CGU, CGV, mentions légales, commerce électronique, sécurité informatique.
+            </div>
         </div>
-
 
     </div>
 
+    <!-- Troisième colonne -->
+    <div class="flex flex-col gap-6 pl-10 lg:w-3/3">
 
-
-    <div class="flex flex-col gap-6 pl-10  ">
-
-        <div class="flex justify-start flex-col  gap-4 ">
-            <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit commercial</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit commercial</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10   text-[#023859] ">
-               Rédaction et négociation des différents, contrats commerciaux, Baux commerciaux, Fonds de commerce, Contentieux commercial , Recouvrement des créances, Propriété industrielle, Droit bancaire et financier, Droit boursier.
-             </div>
+            <div class="test w-full font-roboto text-xl leading-10 text-[#023859]">
+                Rédaction et négociation des différents, contrats commerciaux, Baux commerciaux, Fonds de commerce, Contentieux commercial , Recouvrement des créances, Propriété industrielle, Droit bancaire et financier, Droit boursier.
+            </div>
         </div>
 
-        <div class="flex justify-start flex-col  gap-4">
-            <h1 class="text-2xl font-semibold   mt-8 mb-6 text-[#023859]">Droit civil</h1>
+        <div class="flex justify-start flex-col gap-4">
+            <h1 class="text-2xl font-semibold mt-8 mb-6 text-[#023859]">Droit civil</h1>
             <span class="inline-block w-96 h-0.5 rounded-full bg-[#EDD6A7]"></span>
-             <div class=" test w-full  font-roboto text-xl leading-10  text-[#023859] ">
-              Relations contractuelles, Protection des données personnelles et de la vie privée, Propriété intellectuelle, Droit de la consommation, Sûretés mobilières, Baux à usage d’habitation ou professionnel, Droit des transports, Droit foncier, NTIC.
-             </div>
+            <div class="test w-full font-roboto text-xl leading-10 text-[#023859]">
+                Relations contractuelles, Protection des données personnelles et de la vie privée, Propriété intellectuelle, Droit de la consommation, Sûretés mobilières, Baux à usage d’habitation ou professionnel, Droit des transports, Droit foncier, NTIC.
+            </div>
         </div>
-
-      
-
 
     </div>
-  </section>
+
+</section>
+
    
-    <section class="flex flex-col justify-center items-center  w-full gap-20 bg-[#E5E9EF] mt-2 px-60 py-2 ">
+    <section class="flex flex-col justify-center items-center  w-full gap-20 bg-[#E5E9EF] mt-2 px-60 py-2 "  id="test">
         <h1 class=" text-5xl font-light text-center  mt-8 mb-6 text-[#023859]">Nos Services</h1>
 
             <div class="flex w-full  justify-center bg-white items-center "> 
@@ -193,7 +222,7 @@
 
 
 
-<div class="flex items-end  bg-white">
+<div class="flex items-end  bg-white"  id="test">
 
     <footer class="w-full text-gray-700 bg-gray-100 body-font">
         <div
@@ -305,6 +334,12 @@
     </footer>
 
 </div>
+<script>
+    // JavaScript to toggle mobile menu visibility
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>

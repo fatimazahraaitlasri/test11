@@ -157,6 +157,10 @@
     #test33{
       width: 1000px;
     }
+    #nav{
+      width: 80em;
+    }
+    
   }
 </style>
     <title>Styled Form</title>
@@ -167,17 +171,21 @@
 <div class="relative shadow bg-white">
     <div></div>
 
-    <div class="w-full  p-3 bg-[#023859] ">
+    <div id="nav" class="w-full  p-3 bg-[#023859]  ">
         <div class="relative z-1 h-16 mx-auto px-5 max-w-7xl flex items-center justify-between text-white  text-xl  ">
             <a class="text-2xl hover:text-cyan-400 transition-colors" href="" >
-                      
-                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
-
-                        
+                                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
 
             </a>
 
-            <ul class="flex items-center  justify-center gap-5">
+            <!-- Mobile Navigation Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <ul class="hidden lg:flex items-center justify-center gap-5">
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
@@ -185,6 +193,17 @@
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Contact</a></li>
             </ul>
         </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#023859] text-white" style ="width: 80em;">
+        <ul class="flex flex-col items-center gap-4 py-4">
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Notes Juridiques</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Contact</a></li>
+        </ul>
     </div>
 </div>
 
@@ -503,53 +522,49 @@ et son
 </div>
       </section>
       
-<section  class="flex items-center justify-center" >
-<div class=" grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-40 px-10 py-4" id="section3">
-<div class="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div class="p-6 flex flex-col justify-center items-center  text-center gap-3 ">
-        <img src="https://t3.ftcdn.net/jpg/06/12/73/18/240_F_612731856_ovMPZaIrCn4XQOGZSzdtiU52i3RmkxaV.jpg" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+<section class="flex items-center justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-10 py-4" id="section3">
+        <!-- Premier élément -->
+        <div class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mb-8 sm:mb-0">
+            <div class="p-6 flex flex-col justify-center items-center text-center gap-3">
+                <img src="https://t3.ftcdn.net/jpg/06/12/73/18/240_F_612731856_ovMPZaIrCn4XQOGZSzdtiU52i3RmkxaV.jpg" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#023859] antialiased">
+                    Spécialités juridiques de l'Avocat Rabat
+                </h5>
+                <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                    Quels sont les véritables enjeux de la réforme de la Moudawana au Maroc? Egalement connue sous le nom du Code de la Famille au Maroc
+                </p>
+            </div>
+        </div>
 
-    <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#023859] antialiased ">
-    Spécialités juridiques de l'Avocat Rabat
-    </h5>
-    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-   Quels sont les véritables enjeux de la réforme de la Moudawana au Maroc? Egalement connue sous le nom du Code de la Famille au Maroc
-    </p>
-  </div>
- 
-</div>
+        <!-- Deuxième élément -->
+        <div class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mb-8 sm:mb-0">
+            <div class="p-6 flex flex-col justify-center items-center text-center gap-3">
+                <img src="https://img.freepik.com/free-photo/lawyer-filling-document_23-2147984143.jpg?w=826&t=st=1700217969~exp=1700218569~hmac=e203f7f842293acf33681a62a6c34cfea35e645c355df49e04eaa039a2f76350" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#023859] antialiased">
+                    Guide Complet par Maître Mohammed chekkouri
+                </h5>
+                <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                    En tant qu'avocat d'affaires aguerri à Rabat, je suis souvent sollicitée pour apporter mon expertise et mon accompagnement aux entreprises
+                </p>
+            </div>
+        </div>
 
-<div class="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div class="p-6 flex flex-col justify-center items-center  text-center gap-3 ">
-        <img src="https://img.freepik.com/free-photo/lawyer-filling-document_23-2147984143.jpg?w=826&t=st=1700217969~exp=1700218569~hmac=e203f7f842293acf33681a62a6c34cfea35e645c355df49e04eaa039a2f76350" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
-
-    <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#023859] antialiased ">
-    Guide Complet par Maître Mohammed chekkouri
-    </h5>
-    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-   En tant qu'avocat d'affaires aguerri à Rabat, je suis souvent sollicitée pour apporter mon expertise et mon accompagnement aux entreprises
-    </p>
-  </div>
- 
-</div>
-
-
-<div class="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div class="p-6 flex flex-col justify-center items-center  text-center gap-3 ">
-        <img src="https://img.freepik.com/free-photo/still-life-with-scales-justice_23-2149776015.jpg?w=1380&t=st=1700218060~exp=1700218660~hmac=7f44ded65484ef3bb1fa41a9f91a817af9102e8163059312bd8cb5869a9340c6" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
-
-    <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#023859] antialiased ">
-   Comprendre le Droit Civil à Rabat
-    </h5>
-    <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-   En tant qu'avocate expérimentée exerçant à Rabat, j'ai traversé les méandres fascinants du droit civil marocain pendant des années.
-    </p>
-  </div>
- 
-</div>
-</div>
-
+        <!-- Troisième élément -->
+        <div class="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div class="p-6 flex flex-col justify-center items-center text-center gap-3">
+                <img src="https://img.freepik.com/free-photo/still-life-with-scales-justice_23-2149776015.jpg?w=1380&t=st=1700218060~exp=1700218660~hmac=7f44ded65484ef3bb1fa41a9f91a817af9102e8163059312bd8cb5869a9340c6" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-[#023859] antialiased">
+                    Comprendre le Droit Civil à Rabat
+                </h5>
+                <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                    En tant qu'avocate expérimentée exerçant à Rabat, j'ai traversé les méandres fascinants du droit civil marocain pendant des années.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
+
 
 
 <div class="flex items-end  bg-white">
@@ -694,6 +709,13 @@ et son
     currentSlideIndex = index;
     showSlide(currentSlideIndex);
   }
+</script>
+
+<script>
+    // JavaScript to toggle mobile menu visibility
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
 </script>
 
 <script>

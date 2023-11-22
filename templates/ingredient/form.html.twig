@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Styled Form</title>
+    <style>
+    @media (max-width: 340px) {
+         #nav{
+      width: 80em;
+    }
+      #form{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:80em;
+
+        padding:70px;
+      }
+      form{
+        width:80%;
+      }
+      #containerForm{
+        width:80%;
+        
+      }
+      #img{
+        width:80%;
+      }
+    }
+    </style>
 </head>
 <body>
     
@@ -13,17 +39,21 @@
 <div class="relative shadow bg-white">
     <div></div>
 
-    <div class="w-full  p-3 bg-[#023859] ">
+    <div id="nav" class="w-full  p-3 bg-[#023859]  ">
         <div class="relative z-1 h-16 mx-auto px-5 max-w-7xl flex items-center justify-between text-white  text-xl  ">
             <a class="text-2xl hover:text-cyan-400 transition-colors" href="" >
-                      
-                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
-
-                        
+                                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
 
             </a>
 
-            <ul class="flex items-center  justify-center gap-5">
+            <!-- Mobile Navigation Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <ul class="hidden lg:flex items-center justify-center gap-5">
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
@@ -32,16 +62,27 @@
             </ul>
         </div>
     </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#023859] text-white" style ="width: 80em;">
+        <ul class="flex flex-col items-center gap-4 py-4">
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Notes Juridiques</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Contact</a></li>
+        </ul>
+    </div>
 </div>
-<div class="min-h-screen flex items-center justify-center w-full px-20 ">
+<div class="min-h-screen flex items-center justify-center w-full px-20 " id="form">
 
 
-  <div class=" w-1/2   shadow-lg " >
+  <div class=" w-1/2   shadow-lg " id="img">
     <img src="https://www.lapaixavocat.fr/public/img/big/AdobeStock177631799jpg_5ebd55a4b6573.jpg"/>
 
   </div>
     
-    <div class=" p-6 flex flex-col gap-10  rounded-lg shadow-lg w-1/2">
+    <div class=" p-6 flex flex-col gap-10  rounded-lg shadow-lg w-1/2" id="containerForm">
 
       <div class="flex flex-col justify-center items-center ">
             <h1 class="text-2xl font-semibold text-center  mt-8 mb-6 text-[#023859]">Prendre un rendez-vous</h1>
@@ -51,35 +92,41 @@
       </div>
 
 
-      <form class="w-full ">
-        <div class="flex justify-center items-center gap-3 ">
-            <div class="mb-4 w-1/2">
-                <label for="nombre" class="block mb-2  text-[#023859]  text-xl">NOM</label>
-                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" placeholder="Saisissez votre nom" required>
+       <form class="w-full">
+            <div class="lg:flex justify-center items-center gap-3">
+                <div class="mb-4 lg:w-1/2">
+                    <label for="nombre" class="block mb-2 text-[#023859] text-xl">NOM</label>
+                    <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" placeholder="Saisissez votre nom" required>
+                </div>
+                <div class="mb-4 lg:w-1/2">
+                    <label for="apellido" class="block mb-2 text-sm text-[#023859] text-xl">PRÉNOM</label>
+                    <input type="text" id="apellido" name="apellido" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" placeholder="Saisissez votre prénom" required>
+                </div>
             </div>
-            <div class="mb-4 w-1/2">
-                <label for="apellido" class="block mb-2 text-sm text-[#023859] text-xl">PRÉNOM</label>
-                <input type="text" id="apellido" name="apellido" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" placeholder="Saisissez votre prénom" required>
+            <div class="mb-4">
+                <label for="email" class="block mb-2 text-sm text-[#023859] text-xl">TÉLÉPHONE</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" placeholder="Saisissez votre numéro de téléphone" required>
             </div>
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block mb-2 text-sm text-[#023859] text-xl">TÉLÉPHONE</label>
-          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" placeholder="Saisissez votre numéro de téléphone" required>
-        </div>
-        <div class="mb-4">
-          <label for="password" class="block mb-2 text-sm text-[#023859] text-xl">EMAIL</label>
-          <input type="password" id="password" name="password" placeholder="Saisissez votre email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" required>
-        </div>
-        <div class="mb-6">
-          <label for="confirmPassword" class="block mb-2 text-sm text-[#023859]">MERCI DE NOUS ENVOYER VOS DISPONIBILITÉS</label>
-          <textarea type="password" id="confirmPassword" name="confirmPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" required> </textarea>
-        </div>
-        <button type="submit" class="bg-[#023859] w-full text-white px-4 py-2 hover: focus:outline-none focus:shadow-outline-blue active:bg-blue-800">Envoyer</button>
-      </form>
+            <div class="mb-4">
+                <label for="password" class="block mb-2 text-sm text-[#023859] text-xl">EMAIL</label>
+                <input type="password" id="password" name="password" placeholder="Saisissez votre email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" required>
+            </div>
+            <div class="mb-6">
+                <label for="confirmPassword" class="block mb-2 text-sm text-[#023859]">MERCI DE NOUS ENVOYER VOS DISPONIBILITÉS</label>
+                <textarea type="password" id="confirmPassword" name="confirmPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 border-color-[#ff0000]" required> </textarea>
+            </div>
+            <button type="submit" class="bg-[#023859] w-full text-white px-4 py-2 hover: focus:outline-none focus:shadow-outline-blue active:bg-blue-800">Envoyer</button>
+        </form>
     </div>
 
     
 </div>
+<script>
+    // JavaScript to toggle mobile menu visibility
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>

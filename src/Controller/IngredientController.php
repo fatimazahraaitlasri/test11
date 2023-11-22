@@ -8,11 +8,19 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IngredientController extends AbstractController
 {
-  
 
+    /**
+     * @Route("/", name="app_ingredient_index")
+     */
+    public function index(): Response
+    {
+        return $this->render('ingredient/index.html.twig', [
+            'controller_name' => 'IngredientController',
+        ]);
+    }
 
-        /**
-     * @Route("/form", name="app_ingredient")
+    /**
+     * @Route("/form", name="app_ingredient_form")
      */
     public function form(): Response
     {
@@ -21,19 +29,18 @@ class IngredientController extends AbstractController
         ]);
     }
 
-
-       /**
-     * @Route("/cabinet", name="app_ingredient")
+    /**
+     * @Route("/contact", name="app_ingredient_contact")
      */
-    public function cabinet(): Response
+    public function contact(): Response
     {
-        return $this->render('ingredient/cabinet.html.twig', [
+        return $this->render('ingredient/contact.html.twig', [
             'controller_name' => 'IngredientController',
         ]);
-    } 
+    }
 
-       /**
-     * @Route("/expertises", name="app_ingredient")
+    /**
+     * @Route("/expertises", name="app_ingredient_expertises")
      */
     public function expertises(): Response
     {
@@ -41,27 +48,5 @@ class IngredientController extends AbstractController
             'controller_name' => 'IngredientController',
         ]);
     }
-    
 
-
-    
-    /**
-     * @Route("/contact", name="app_ingredient")
-     */
-    public function contact(): Response
-    {
-        return $this->render('ingredient/contact.html.twig', [
-            'controller_name' => 'IngredientController',
-        ]);
-    } 
-    
-    /**
-* @Route("/", name="app_ingredient")
-*/
-public function index(): Response
-{
-return $this->render('ingredient/index.html.twig', [
-    'controller_name' => 'IngredientController',
-]);
-} 
 }

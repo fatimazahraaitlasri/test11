@@ -7,10 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Styled Form</title>
     <style>
+     @media (max-width: 340px) {
     .test{
      
         font-family: fangsong;
     }
+            #nav{
+      width: 80em;
+    }
+    #test{
+      width: 1283px;
+    }
+    img{
+          width: -webkit-fill-available;
+    }
+     }
     </style>
 </head>
 <body>
@@ -19,17 +30,21 @@
 <div class="relative shadow bg-white">
     <div></div>
 
-    <div class="w-full  p-3 bg-[#023859] ">
+    <div id="nav" class="w-full  p-3 bg-[#023859]  ">
         <div class="relative z-1 h-16 mx-auto px-5 max-w-7xl flex items-center justify-between text-white  text-xl  ">
             <a class="text-2xl hover:text-cyan-400 transition-colors" href="" >
-                      
-                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
-
-                        
+                                        <svg class="w-20" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ecd5a6}</style><path d="M522.1 62.4c16.8-5.6 25.8-23.7 20.2-40.5S518.6-3.9 501.9 1.6l-113 37.7C375 15.8 349.3 0 320 0c-44.2 0-80 35.8-80 80c0 3 .2 5.9 .5 8.8L117.9 129.6c-16.8 5.6-25.8 23.7-20.2 40.5s23.7 25.8 40.5 20.2l135.5-45.2c4.5 3.2 9.3 5.9 14.4 8.2V480c0 17.7 14.3 32 32 32H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V153.3c21-9.2 37.2-27 44.2-49l125.9-42zM439.6 288L512 163.8 584.4 288H439.6zM512 384c62.9 0 115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L536.1 109.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L392.7 273.1c-5.7 9.8-9.3 21.1-6.7 32.1C396.8 350 449.1 384 512 384zM129.2 291.8L201.6 416H56.7l72.4-124.2zM3.2 433.1C14 478 66.3 512 129.2 512s115.2-34 126-78.9c2.6-11-1-22.3-6.7-32.1L153.2 237.8c-5-8.6-14.2-13.8-24.1-13.8s-19.1 5.3-24.1 13.8L9.9 401.1c-5.7 9.8-9.3 21.1-6.7 32.1z"/></svg>
 
             </a>
 
-            <ul class="flex items-center  justify-center gap-5">
+            <!-- Mobile Navigation Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <ul class="hidden lg:flex items-center justify-center gap-5">
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
                 <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
@@ -38,43 +53,50 @@
             </ul>
         </div>
     </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#023859] text-white" style ="width: 80em;">
+        <ul class="flex flex-col items-center gap-4 py-4">
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Le Cabinet</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Expertises & Services</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Bibliothèque</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Notes Juridiques</a></li>
+            <li><a class="hover:text-cyan-400 transition-colors" href="">Contact</a></li>
+        </ul>
+    </div>
 </div>
 
 
 
+<div class="flex flex-col items-center justify-center w-full mb-12"  id="test">
 
+    <!-- Mobile View -->
+    <div class="lg:hidden w-full">
+          <img src="https://www.lapaixavocat.fr/public/img/big/AdobeStock177631799jpg_5ebd55a4b6573.jpg"  />
 
-
-
-
-<div class=" flex items-center justify-center w-full mb-12 ">
-
-
-  <div class=" w-1/2   shadow-lg " >
-    <img src="https://www.lapaixavocat.fr/public/img/big/AdobeStock177631799jpg_5ebd55a4b6573.jpg"/>
-
-  </div>
-    
-    <div class=" p-6 flex flex-col gap-16  rounded-lg  w-1/2 h-full">
-
-      <div class="flex flex-col justify-center items-center ">
-            <h1 class="text-2xl font-semibold text-center  mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed Chekkouri à Rabat</h1>
-            <span class="inline-block  text-[#EDD6A7]"> LE CABINET AVOCAT RABAT DE CONFIANCE POUR TOUS VOS BESOINS</span>
-      
-      
-      </div>
-
-
-      <div class=" test w-full text-center font-roboto text-xl leading-10  text-slate-400 ">
-       
-       Situé stratégiquement au cœur de Rabat, le Cabinet d'Avocat de Maître Mohammed Chekkouri est votre référence en matière de conseil et de représentation juridique.
-
-       Fort de son expertise reconnue, notre cabinet avocat à Rabat se dédie à offrir des services juridiques de premier plan, combinant professionnalisme, passion et une profonde connaissance du droit marocain.
-        
-      </div>
     </div>
 
-    
+    <div class="hidden lg:flex w-1/2 shadow-lg">
+        <img src="https://www.lapaixavocat.fr/public/img/big/AdobeStock177631799jpg_5ebd55a4b6573.jpg"/>
+
+    </div>
+
+    <div class="p-6 flex flex-col gap-16 rounded-lg w-1/2 h-full">
+
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-semibold text-center mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed Chekkouri à Rabat</h1>
+            <span class="inline-block text-[#EDD6A7]"> LE CABINET AVOCAT RABAT DE CONFIANCE POUR TOUS VOS BESOINS</span>
+        </div>
+
+        <div class="test w-full text-center font-roboto text-xl leading-10 text-slate-400">
+
+            Situé stratégiquement au cœur de Rabat, le Cabinet d'Avocat de Maître Mohammed Chekkouri est votre référence en matière de conseil et de représentation juridique.
+
+            Fort de son expertise reconnue, notre cabinet avocat à Rabat se dédie à offrir des services juridiques de premier plan, combinant professionnalisme, passion et une profonde connaissance du droit marocain.
+
+        </div>
+    </div>
+
 </div>
 
 
@@ -83,40 +105,39 @@
 
 
 
+<div class="flex flex-col items-center justify-center w-full mb-12" id="test">
 
+    <!-- Mobile View -->
+    <div class="lg:hidden w-full">
+          <img src="https://img.freepik.com/free-photo/closeup-shot-person-writing-book-with-gavel-table_181624-57173.jpg?w=1380&t=st=1700470090~exp=1700470690~hmac=6739595075b9d29452c3e8633ffdea21d4dffca18c4cd33792000b28d6516395"/>
 
+    </div>
 
-<div class=" flex items-center justify-center w-full mb-12 ">
+    <div class="hidden lg:flex w-1/2 shadow-lg">
+          <img src="https://img.freepik.com/free-photo/closeup-shot-person-writing-book-with-gavel-table_181624-57173.jpg?w=1380&t=st=1700470090~exp=1700470690~hmac=6739595075b9d29452c3e8633ffdea21d4dffca18c4cd33792000b28d6516395"/>
 
+    </div>
 
+    <div class="p-6 flex flex-col gap-16 rounded-lg w-1/2 h-full">
 
-    
-    <div class=" p-6 flex flex-col gap-16  rounded-lg  w-1/2 h-full">
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-semibold text-center mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed Chekkouri à Rabat</h1>
+            <span class="inline-block text-[#EDD6A7]">  Expertise et professionnalisme du cabinet avocat Rabat</span>
+        </div>
 
-      <div class="flex flex-col justify-center items-center ">
-            <h1 class="text-2xl font-semibold text-center  mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed Chekkouri à Rabat</h1>
-            <span class="inline-block  text-[#EDD6A7]"> Expertise et professionnalisme du cabinet avocat Rabat</span>
-      
-      
-      </div>
+        <div class="test w-full text-center font-roboto text-xl leading-10 text-slate-400">
 
-
-      <div class=" test w-full text-center font-roboto text-xl leading-10  text-slate-400 ">
-        Lorsqu'il s'agit de représenter et de conseiller juridiquement, l'expertise et le professionnalisme sont primordiaux.
+                  Lorsqu'il s'agit de représenter et de conseiller juridiquement, l'expertise et le professionnalisme sont primordiaux.
 
         À Rabat, le cabinet avocat dirigé par Maître Mohammed Chekkouri incarne ces deux qualités. Avec une riche expérience acquise au fil des années, ce cabinet avocat Rabat se distingue par sa maîtrise approfondie du droit marocain.
 
         Chaque client est assuré d'une approche personnalisée, ancrée dans une rigueur juridique et une éthique professionnelle sans faille.
 
         Choisir ce cabinet avocat à Rabat, c'est opter pour une expertise avérée et un professionnalisme incontestable, garantissant une représentation et des conseils de premier ordre. 
-      </div>
+
+        </div>
     </div>
 
-      <div class=" w-1/2   shadow-lg " >
-    <img src="https://img.freepik.com/free-photo/closeup-shot-person-writing-book-with-gavel-table_181624-57173.jpg?w=1380&t=st=1700470090~exp=1700470690~hmac=6739595075b9d29452c3e8633ffdea21d4dffca18c4cd33792000b28d6516395"/>
-
-  </div>
-    
 </div>
 
 
@@ -125,74 +146,84 @@
 
 
 
-<div class=" flex items-center justify-center w-full mb-12 ">
 
 
-  <div class=" w-1/2   shadow-lg " >
-    <img src="https://img.freepik.com/free-photo/businessmen-shaking-hands-successful-corporate-agreement-generated-by-ai_188544-26937.jpg?t=st=1700470220~exp=1700473820~hmac=d4f8e7e522cce2be55814f8b7a082e2a034c96f727af025698b30a89776ca33f&w=1380"/>
 
-  </div>
-    
-    <div class=" p-6 flex flex-col gap-16  rounded-lg  w-1/2 h-full">
+<div class="flex flex-col items-center justify-center w-full mb-12" id="test">
 
-      <div class="flex flex-col justify-center items-center ">
-            <h1 class="text-2xl font-semibold text-center  mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed chekkouri à Rabat</h1>
-            <span class="inline-block  text-[#EDD6A7]"> Services juridiques proposés par Maître Mohammed Chekkouri</span>
-      
-      
-      </div>
+    <!-- Mobile View -->
+    <div class="lg:hidden w-full">
+           <img src="https://img.freepik.com/free-photo/businessmen-shaking-hands-successful-corporate-agreement-generated-by-ai_188544-26937.jpg?t=st=1700470220~exp=1700473820~hmac=d4f8e7e522cce2be55814f8b7a082e2a034c96f727af025698b30a89776ca33f&w=1380"/>
 
+    </div>
 
-      <div class=" test w-full text-center font-roboto text-xl leading-10  text-slate-400 ">
-       
-        Maître Mohammed Chekkouri, éminente avocate basée à Rabat, offre une gamme diversifiée de services juridiques pour répondre aux besoins complexes de ses clients.
+    <div class="hidden lg:flex w-1/2 shadow-lg">
+                  <img src="https://img.freepik.com/free-photo/businessmen-shaking-hands-successful-corporate-agreement-generated-by-ai_188544-26937.jpg?t=st=1700470220~exp=1700473820~hmac=d4f8e7e522cce2be55814f8b7a082e2a034c96f727af025698b30a89776ca33f&w=1380"/>
+
+    </div>
+
+    <div class="p-6 flex flex-col gap-16 rounded-lg w-1/2 h-full">
+
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-semibold text-center mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed chekkouri à Rabat</h1>
+            <span class="inline-block text-[#EDD6A7]">  Services juridiques proposés par Maître Mohammed Chekkouri</span>
+        </div>
+
+        <div class="test w-full text-center font-roboto text-xl leading-10 text-slate-400">
+
+      Maître Mohammed Chekkouri, éminente avocate basée à Rabat, offre une gamme diversifiée de services juridiques pour répondre aux besoins complexes de ses clients.
 
         Son cabinet est reconnu pour son expertise en droit civil, commercial, pénal, et administratif. À chaque étape, Maître Laila met l'accent sur l'écoute, la rigueur et l'innovation.
 
         Que ce soit pour la médiation, la représentation en tribunal ou le conseil stratégique, chaque client bénéficie d'une solution sur mesure.
 
         En choisissant les services juridiques de Maître Mohammed Chekkouri à Rabat, vous investissez dans une expertise éprouvée et une approche centrée sur le client.
-        
-      </div>
+
+        </div>
     </div>
 
-    
 </div>
 
 
 
 
 
-<div class=" flex items-center justify-center w-full mb-12 ">
 
 
- 
-    
-    <div class=" p-6 flex flex-col gap-16  rounded-lg  w-1/2 h-full">
-
-      <div class="flex flex-col justify-center items-center ">
-            <h1 class="text-2xl font-semibold text-center  mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed Chekkouri à Rabat</h1>
-            <span class="inline-block  text-[#EDD6A7]">Mr. Mohammed Chekkouri</span>
-      
-      
-      </div>
 
 
-      <div class=" test w-full text-center font-roboto text-xl leading-10  text-slate-400 ">
-       
-        Mr.Mohammed Chekkouri   est doctorant en droit public et droit privé (Université Mohamed V de Rabat), titulair d’un diplôme d’études supérieures approfondies en gestion de politique publique
+
+<div class="flex flex-col items-center justify-center w-full mb-12" id="test">
+
+    <!-- Mobile View -->
+    <div class="lg:hidden w-full">
+          <img src="<img src="https://img.freepik.com/free-photo/businessman-with-pen-contract_1098-3667.jpg?w=1380&t=st=1700470442~exp=1700471042~hmac=0a26bf46990adb895b6561e3c76742d8d14d04062b6305c8d28049b1354f19a4"/>"/>
+
+    </div>
+
+    <div class="hidden lg:flex w-1/2 shadow-lg">
+                 <img src="<img src="https://img.freepik.com/free-photo/businessman-with-pen-contract_1098-3667.jpg?w=1380&t=st=1700470442~exp=1700471042~hmac=0a26bf46990adb895b6561e3c76742d8d14d04062b6305c8d28049b1354f19a4"/>"/>
+
+
+    </div>
+
+    <div class="p-6 flex flex-col gap-16 rounded-lg w-1/2 h-full">
+
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-semibold text-center mt-8 mb-6 text-[#023859]">Cabinet d'Avocat de Maître Mohammed Chekkouri à Rabat</h1>
+            <span class="inline-block text-[#EDD6A7]">Mr. Mohammed Chekkouri</span>
+        </div>
+
+        <div class="test w-full text-center font-roboto text-xl leading-10 text-slate-400">
+
+            Mr.Mohammed Chekkouri   est doctorant en droit public et droit privé (Université Mohamed V de Rabat), titulair d’un diplôme d’études supérieures approfondies en gestion de politique publique
          (DESA Université Mohamed V de Rabat) et d’un Bachelor en Business Administration (Université internationale SCHILLER de Madrid). Egalement diplômé du CAPA depuis 2011, Mr.Mohammed Chekkouri   est parfaitement trilingue.
 
             Mr.Mohammed Chekkouri   connait bien les problématiques des grandes entreprises, aussi bien multinationales que grandes structures marocaines, et ce bien sur le plan social que sociétal. Mr.Mohammed Chekkouri   a pu acquérir une expérience juridique et professionnelle solide et polyvalente qu’elle met aujourd’hui au service de ses clients.
-        
-      </div>
+
+        </div>
     </div>
-     <div class=" w-1/2   shadow-lg " >
-    <img src="https://img.freepik.com/free-photo/businessman-with-pen-contract_1098-3667.jpg?w=1380&t=st=1700470442~exp=1700471042~hmac=0a26bf46990adb895b6561e3c76742d8d14d04062b6305c8d28049b1354f19a4"/>
 
-  </div>
-
-    
 </div>
 
 
@@ -201,38 +232,67 @@
 
 
 
-<div class=" flex items-center justify-center w-full mb-12 ">
+<div class="flex flex-col items-center justify-center w-full mb-12" id="test">
 
+    <!-- Mobile View -->
+    <div class="lg:hidden w-full">
+          <img src="https://img.freepik.com/free-photo/still-life-with-scales-justice_23-2149776023.jpg?w=1380&t=st=1700470295~exp=1700470895~hmac=720961ca32ce8a18ecb22ee3c653ec69139e2ad68f2283edda59a6a3457a85a8"/>
 
-  <div class=" w-1/2   shadow-lg " >
-            <img src="https://img.freepik.com/free-photo/still-life-with-scales-justice_23-2149776023.jpg?w=1380&t=st=1700470295~exp=1700470895~hmac=720961ca32ce8a18ecb22ee3c653ec69139e2ad68f2283edda59a6a3457a85a8"/>
-
-  </div>
-    
-    <div class=" p-6 flex flex-col gap-16  rounded-lg  w-1/2 h-full">
-
-      <div class="flex flex-col justify-center items-center ">
-            <h1 class="text-2xl font-semibold text-center  mt-8 mb-6 text-[#023859]">Notre philosophie</h1>
-            <span class="inline-block  text-[#EDD6A7]"> Toujours placer le client au cœur de nos préoccupations.</span>
-      
-      
-      </div>
-
-
-      <div class=" test w-full text-center font-roboto text-xl leading-10  text-slate-400 ">
-       
-      En tant qu'Avocat d'Affaires à Rabat, nous mettons un point d'honneur à instaurer une relation de proximité avec nos clients, favorisant un échange direct et continu. Chaque dossier est traité avec réactivité et fait l'objet d'une analyse minutieuse par un interlocuteur dédié.
-        
-      </div>
     </div>
 
+    <div class="hidden lg:flex w-1/2 shadow-lg">
+          <img src="https://img.freepik.com/free-photo/still-life-with-scales-justice_23-2149776023.jpg?w=1380&t=st=1700470295~exp=1700470895~hmac=720961ca32ce8a18ecb22ee3c653ec69139e2ad68f2283edda59a6a3457a85a8"/>
+    </div>
 
-    
+    <div class="p-6 flex flex-col gap-16 rounded-lg w-1/2 h-full">
+
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-semibold text-center mt-8 mb-6 text-[#023859]">Notre philosophie</h1>
+            <span class="inline-block text-[#EDD6A7]">Toujours placer le client au cœur de nos préoccupations.</span>
+        </div>
+
+        <div class="test w-full text-center font-roboto text-xl leading-10 text-slate-400">
+
+           En tant qu'Avocat d'Affaires à Rabat, nous mettons un point d'honneur à instaurer une relation de proximité avec nos clients, favorisant un échange direct et continu. Chaque dossier est traité avec réactivité et fait l'objet d'une analyse minutieuse par un interlocuteur dédié.
+        
+        </div>
+    </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div>
-      <div class="flex flex-col justify-center items-center ">
+      <div class="flex flex-col justify-center items-center " id="test">
             <h1 class="text-2xl font-bold text-center  mt-8 mb-6 text-[#023859]">Ils nous font confiance</h1>
            
           <div class=" flex justify-center items-center gap-10 p-20" >
@@ -247,7 +307,7 @@
       </div>
 </div>
 
-<div class="flex items-end  bg-white">
+<div class="flex items-end  bg-white" id="test">
 
     <footer class="w-full text-gray-700 bg-gray-100 body-font">
         <div
@@ -374,7 +434,12 @@
 
 
 
-
+<script>
+    // JavaScript to toggle mobile menu visibility
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
