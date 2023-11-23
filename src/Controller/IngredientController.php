@@ -49,4 +49,15 @@ class IngredientController extends AbstractController
         ]);
     }
 
+    
+    /**
+     * @Route("/cabinet", name="app_ingredient_cabinet")
+     */
+    public function cabinet(): Response
+    {
+        return $this->render('ingredient/cabinet.html.twig', [
+            'controller_name' => 'IngredientController',
+        ]);
+    }
+
 }
