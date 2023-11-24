@@ -60,4 +60,16 @@ class IngredientController extends AbstractController
         ]);
     }
 
+
+
+        /**
+     * @Route("/test", name="app_ingredient_test")
+     */
+    public function test(): Response
+    {
+        return $this->render('ingredient/test.html.twig', [
+            'controller_name' => 'IngredientController',
+        ]);
+    }
+
 }
